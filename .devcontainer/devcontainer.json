@@ -1,0 +1,26 @@
+{
+  "name": "linux-archive-backend-dev",
+  "dockerComposeFile": ["../docker/dev/docker-compose.yml", "docker-compose.yml"],
+  "service": "fastapi",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "remoteUser": "vscode",
+  "overrideCommand": false,
+  "forwardPorts": [8000],
+  "postStartCommand": "uvicorn main:app --host 0.0.0.0 --port 8000 --reload",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "PKief.material-icon-theme",
+        "GitHub.copilot-chat",
+        "GitHub.copilot",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
+        "ms-azuretools.vscode-containers"
+      ]
+    }
+  }
+}

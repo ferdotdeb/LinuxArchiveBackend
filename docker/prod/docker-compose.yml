@@ -1,0 +1,14 @@
+name: linux-archive-backend-prod
+
+services:
+  fastapi:
+    restart: always
+    build:
+      context: ../../ # <- Esto apunta a la raíz del repo
+      dockerfile: docker/prod/Dockerfile
+    env_file:
+      - ../../.env
+    ports:
+      - "${DOCKER_PROD_FASTAPI_PORT}:8000"
+    command: >
+      sh -c "uvicorn main:app --host 0.0.0.0 --port 8000"

@@ -1,0 +1,7 @@
+services:
+  fastapi:
+    volumes:
+      - ../../../:/workspaces:cached
+
+    command: sleep infinity
+ 
