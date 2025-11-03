@@ -3,7 +3,6 @@
   "dockerComposeFile": ["../docker/dev/docker-compose.yml", "docker-compose.yml"],
   "service": "fastapi",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "remoteUser": "vscode",
   "overrideCommand": false,
   "forwardPorts": [8000],
   "postStartCommand": "uvicorn main:app --host 0.0.0.0 --port 8000 --reload",
